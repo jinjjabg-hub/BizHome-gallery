@@ -335,23 +335,32 @@ let allCards = [];
 let activeFilter = 'all';
 let searchQuery = '';
 
+// Fisher-Yates 셔플 — 매번 열 때마다 카드 순서를 랜덤으로 섞는다
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 // cards.json 로드
 fetch('./cards.json')
   .then(r => r.json())
   .then(data => {
-    allCards = data;
+    allCards = shuffle(data);
     render();
   })
   .catch(() => {
     // 로드 실패 시 기본 데이터 사용
-    allCards = [
+    allCards = shuffle([
       {"name":"송승훈","company":"T.M Link","role":"대표","url":"https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/","tier":"standard","category":"컨설팅","chapter":"BNI 파이오니어"},
       {"name":"김지현","company":"감성온도","role":"대표","url":"https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/","tier":"standard","category":"기타","chapter":"BNI 파이오니어"},
       {"name":"이화춘","company":"뷰티랩","role":"원장","url":"https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9D%B4%ED%99%94%EC%B6%98/","tier":"premium","category":"뷰티","chapter":"BNI 파이오니어"},
       {"name":"이서원","company":"웰슨트서원","role":"대표","url":"https://jinjjabg-hub.github.io/NAMECARD/%EC%9D%B4%EC%84%9C%EC%9B%90","tier":"premium","category":"헬스","chapter":"BNI 파이오니어"},
       {"name":"박성준","company":"엘로이미디어","role":"대표","url":"https://jinjjabg-hub.github.io/bni-giants/%EB%B0%95%EC%84%B1%EC%A4%80/index.html","tier":"standard","category":"미디어","chapter":"BNI 자이언츠"},
       {"name":"김준래","company":"무늬디자인","role":"대표","url":"https://jinjjabg-hub.github.io/bni-giants/%EA%B9%80%EC%A4%80%EB%9E%98/index.html","tier":"standard","category":"디자인","chapter":"BNI 자이언츠"}
-    ];
+    ]);
     render();
   });
 

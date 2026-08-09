@@ -187,5 +187,32 @@
     "tier": "standard",
     "category": "한의원,제조",
     "chapter": "BNI 자이언츠"
+  },
+  {
+    "name": "박선영",
+    "company": "SHIELD Y",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EB%B0%95%EC%84%A0%EC%98%81/",
+    "tier": "standard",
+    "category": "안전용품",
+    "chapter": "BNI 파이오니어"
+  },
+  {
+    "name": "임춘식",
+    "company": "꽃가람",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9E%84%EC%B6%98%EC%8B%9D/",
+    "tier": "standard",
+    "category": "화훼",
+    "chapter": "BNI 파이오니어"
+  },
+  {
+    "name": "유진석",
+    "company": "전북국제행정사사무소",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EC%9C%A0%EC%A7%84%EC%84%9D/",
+    "tier": "standard",
+    "category": "행정",
+    "chapter": ""
   }
 ]
