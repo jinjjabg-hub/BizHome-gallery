@@ -111,8 +111,8 @@ header {
 .gallery-grid {
   padding: 0 48px 80px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
 }
 
 /* CARD */
@@ -132,42 +132,47 @@ header {
   box-shadow: 0 20px 48px rgba(242,202,80,0.1);
 }
 .card-cover {
-  height: 120px; position: relative;
+  height: 44px; width: 44px; position: relative;
   display: flex; align-items: center; justify-content: center;
-  overflow: hidden;
+  overflow: hidden; border-radius: 11px; flex-shrink: 0;
+}
+.card-cover-img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; display: none;
 }
 .card-cover-char {
   font-family: 'Montserrat', sans-serif;
-  font-size: 56px; font-weight: 800;
-  opacity: 0.15; line-height: 1;
+  font-size: 18px; font-weight: 800;
+  opacity: 0.85; line-height: 1;
 }
+.card-top { display: flex; align-items: center; gap: 12px; padding: 16px 18px 0; }
+.card-title-wrap { min-width: 0; flex: 1; }
+.card-name-row { display: flex; align-items: center; gap: 7px; }
 .card-tier-badge {
-  position: absolute; top: 12px; right: 12px;
-  font-size: 9px; font-weight: 700; letter-spacing: 0.12em;
-  text-transform: uppercase; padding: 3px 10px;
-  border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(0,0,0,0.3); color: rgba(255,255,255,0.8);
-  backdrop-filter: blur(8px);
+  font-size: 8px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 2px 8px;
+  border-radius: 20px; border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.55); white-space: nowrap;
 }
 .card-chapter {
-  position: absolute; bottom: 12px; left: 12px;
-  font-size: 9px; font-weight: 600; letter-spacing: 0.08em;
-  color: var(--gold); opacity: 0.8;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.04em;
+  color: var(--gold); opacity: 0.75; white-space: nowrap;
 }
-.card-body { padding: 18px 20px 20px; }
-.card-name { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; color: var(--white); }
-.card-role { font-size: 11px; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
-.card-company { font-size: 13px; color: var(--muted); margin-top: 6px; }
+.card-body { padding: 10px 18px 16px; }
+.card-name { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-role { font-size: 10px; color: var(--gold); letter-spacing: 0.06em; margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-company { font-size: 12px; color: var(--muted); margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .card-footer {
   display: flex; align-items: center; justify-content: space-between;
-  margin-top: 14px; padding-top: 14px;
+  margin-top: 10px; padding-top: 10px;
   border-top: 1px solid var(--border);
 }
 .card-category {
-  font-size: 11px; padding: 3px 10px;
+  font-size: 10px; padding: 3px 9px;
   background: rgba(242,202,80,0.08);
   border: 1px solid rgba(242,202,80,0.2);
   border-radius: 20px; color: var(--gold);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 55%;
 }
 .card-link-icon { color: var(--muted); font-size: 18px; transition: color 0.2s; }
 .dica-card:hover .card-link-icon { color: var(--gold); }
@@ -260,11 +265,12 @@ footer a { color: var(--gold); text-decoration: none; font-size: 12px; }
   .gallery-hero { padding: 40px 20px 28px; }
   .filter-bar { padding: 0 20px 20px; }
   .search-wrap { padding: 0 20px 20px; }
-  .gallery-grid { padding: 0 20px 60px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
-  .card-cover { height: 90px; }
-  .card-cover-char { font-size: 40px; }
-  .card-body { padding: 14px 14px 16px; }
-  .card-name { font-size: 15px; }
+  .gallery-grid { padding: 0 20px 60px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .card-top { padding: 13px 14px 0; gap: 9px; }
+  .card-cover { height: 36px; width: 36px; border-radius: 9px; }
+  .card-cover-char { font-size: 15px; }
+  .card-body { padding: 8px 14px 13px; }
+  .card-name { font-size: 14px; }
   footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
 }
 </style>
@@ -364,6 +370,22 @@ fetch('./cards.json')
     render();
   });
 
+// 프로필 사진 로드 — 파일명이 명함마다 달라서 순서대로 시도, 다 실패하면 글자 그대로 유지
+const PHOTO_FILENAMES = ['profil.png', 'profile.png', 'profil.jpg', 'profile.jpg', 'profil.jpeg'];
+
+function getPhotoBase(url) {
+  let base = url.replace(/index\.html?$/, '');
+  if (!base.endsWith('/')) base += '/';
+  return base;
+}
+
+function loadCardPhoto(img, base, idx) {
+  if (idx >= PHOTO_FILENAMES.length) return; // 전부 실패 — 뒤에 있는 글자 아바타가 그대로 보임
+  img.onerror = () => loadCardPhoto(img, base, idx + 1);
+  img.onload = () => { img.style.display = 'block'; };
+  img.src = base + PHOTO_FILENAMES[idx];
+}
+
 function render() {
   const grid = document.getElementById('gallery-grid');
   const q = searchQuery.toLowerCase();
@@ -397,14 +419,20 @@ function render() {
 
   grid.innerHTML = filtered.map((card, i) => `
     <a class="dica-card" href="${card.url}" target="_blank">
-      <div class="card-cover ${colors[i % colors.length]}">
-        <div class="card-cover-char">${card.name.charAt(0)}</div>
-        <span class="card-tier-badge">${tierLabel[(card.tier || '').toLowerCase()] || card.tier}</span>
-        ${card.chapter ? `<span class="card-chapter">${card.chapter}</span>` : ''}
+      <div class="card-top">
+        <div class="card-cover ${colors[i % colors.length]}">
+          <img class="card-cover-img" data-base="${getPhotoBase(card.url)}" loading="lazy" alt="">
+          <div class="card-cover-char">${card.name.charAt(0)}</div>
+        </div>
+        <div class="card-title-wrap">
+          <div class="card-name-row">
+            <span class="card-name">${card.name}</span>
+            <span class="card-tier-badge">${tierLabel[(card.tier || '').toLowerCase()] || card.tier}</span>
+          </div>
+          <div class="card-role">${card.role}${card.chapter ? ` · <span class="card-chapter">${card.chapter}</span>` : ''}</div>
+        </div>
       </div>
       <div class="card-body">
-        <div class="card-name">${card.name}</div>
-        <div class="card-role">${card.role}</div>
         <div class="card-company">${card.company}</div>
         <div class="card-footer">
           <span class="card-category">${card.category}</span>
@@ -423,6 +451,10 @@ function render() {
       <p>새 카드 추가 시<br/>cards.json에<br/>한 줄 추가</p>
     </div>
   `;
+
+  grid.querySelectorAll('.card-cover-img').forEach(img => {
+    loadCardPhoto(img, img.dataset.base, 0);
+  });
 }
 
 // 필터
