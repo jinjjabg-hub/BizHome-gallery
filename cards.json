@@ -214,5 +214,32 @@
     "tier": "standard",
     "category": "행정",
     "chapter": ""
+  },
+  {
+    "name": "정상현",
+    "company": "아메리츠 파이낸셜",
+    "role": "아시아 마케팅 디렉터",
+    "url": "https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%A0%95%EC%83%81%ED%98%84/",
+    "tier": "standard",
+    "category": "금융",
+    "chapter": "BNI 파이오니어"
+  },
+  {
+    "name": "강라감",
+    "company": "광안리 마도로스 · 엘레나",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/bni-giants/%EA%B0%95%EB%9D%BC%EA%B0%90/",
+    "tier": "standard",
+    "category": "외식",
+    "chapter": "BNI 자이언츠"
+  },
+  {
+    "name": "강미경",
+    "company": "숙성채",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EA%B0%95%EB%AF%B8%EA%B2%BD/",
+    "tier": "standard",
+    "category": "식품",
+    "chapter": "기타"
   }
 ]
