@@ -125,6 +125,7 @@ header {
   transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
   text-decoration: none; color: inherit;
   display: block;
+  position: relative;
 }
 .dica-card:hover {
   border-color: var(--gold);
@@ -145,14 +146,15 @@ header {
   font-size: 18px; font-weight: 800;
   opacity: 0.85; line-height: 1;
 }
-.card-top { display: flex; align-items: center; gap: 12px; padding: 16px 18px 0; }
+.card-top { display: flex; align-items: center; gap: 12px; padding: 16px 44px 0 18px; }
 .card-title-wrap { min-width: 0; flex: 1; }
-.card-name-row { display: flex; align-items: center; gap: 7px; }
+.card-name-row { display: block; }
 .card-tier-badge {
+  position: absolute; top: 14px; right: 14px;
   font-size: 8px; font-weight: 700; letter-spacing: 0.1em;
   text-transform: uppercase; padding: 2px 8px;
   border-radius: 20px; border: 1px solid rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.55); white-space: nowrap;
+  color: rgba(255,255,255,0.5); white-space: nowrap;
 }
 .card-chapter {
   font-size: 10px; font-weight: 600; letter-spacing: 0.04em;
@@ -266,7 +268,7 @@ footer a { color: var(--gold); text-decoration: none; font-size: 12px; }
   .filter-bar { padding: 0 20px 20px; }
   .search-wrap { padding: 0 20px 20px; }
   .gallery-grid { padding: 0 20px 60px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-  .card-top { padding: 13px 14px 0; gap: 9px; }
+  .card-top { padding: 13px 40px 0 14px; gap: 9px; }
   .card-cover { height: 36px; width: 36px; border-radius: 9px; }
   .card-cover-char { font-size: 15px; }
   .card-body { padding: 8px 14px 13px; }
@@ -419,6 +421,7 @@ function render() {
 
   grid.innerHTML = filtered.map((card, i) => `
     <a class="dica-card" href="${card.url}" target="_blank">
+      <span class="card-tier-badge">${tierLabel[(card.tier || '').toLowerCase()] || card.tier}</span>
       <div class="card-top">
         <div class="card-cover ${colors[i % colors.length]}">
           <img class="card-cover-img" data-base="${getPhotoBase(card.url)}" loading="lazy" alt="">
@@ -427,7 +430,6 @@ function render() {
         <div class="card-title-wrap">
           <div class="card-name-row">
             <span class="card-name">${card.name}</span>
-            <span class="card-tier-badge">${tierLabel[(card.tier || '').toLowerCase()] || card.tier}</span>
           </div>
           <div class="card-role">${card.role}${card.chapter ? ` · <span class="card-chapter">${card.chapter}</span>` : ''}</div>
         </div>
