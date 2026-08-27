@@ -241,5 +241,32 @@
     "tier": "standard",
     "category": "식품",
     "chapter": "기타"
+  },
+  {
+    "name": "윤현석",
+    "company": "윤오토자동차정비",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/bni-giants/%EC%9C%A4%ED%98%84%EC%84%9D/",
+    "tier": "standard",
+    "category": "자동차정비",
+    "chapter": "BNI 자이언츠"
+  },
+  {
+    "name": "박주해",
+    "company": "브이엘 이미지컨설팅",
+    "role": "이미지 컨설턴트",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EB%B0%95%EC%A3%BC%ED%95%B4/",
+    "tier": "standard",
+    "category": "컨설팅",
+    "chapter": "기타"
+  },
+  {
+    "name": "조은영",
+    "company": "에어월드시스템BS",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%A1%B0%EC%9D%80%EC%98%81/",
+    "tier": "standard",
+    "category": "설비",
+    "chapter": "BNI 파이오니어"
   }
 ]
