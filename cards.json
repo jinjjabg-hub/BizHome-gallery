@@ -1,5 +1,15 @@
 [
   {
+    "name": "파이오니어 비즈홈",
+    "company": "BNI 파이오니어 챕터 디렉토리",
+    "role": "디렉토리",
+    "url": "https://jinjjabg-hub.github.io/BNI-PIONEER-cards/",
+    "tier": "directory",
+    "category": "디렉토리",
+    "chapter": "BNI 파이오니어",
+    "pinned": true
+  },
+  {
     "name": "송승훈",
     "company": "T.M Link",
     "role": "대표",
@@ -268,5 +278,122 @@
     "tier": "standard",
     "category": "설비",
     "chapter": "BNI 파이오니어"
+  },
+  {
+    "name": "김근우",
+    "company": "창운",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EA%B7%BC%EC%9A%B0/",
+    "tier": "standard",
+    "category": "광고기획",
+    "chapter": "BNI 파이오니어"
+  },
+  {
+    "name": "윤민수",
+    "company": "㈜이엘그룹",
+    "role": "대표이사",
+    "url": "https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9C%A4%EB%AF%BC%EC%88%98/",
+    "tier": "standard",
+    "category": "무인태닝",
+    "chapter": "BNI 파이오니어"
+  },
+  {
+    "name": "이해경",
+    "company": "데일카네기 부산",
+    "role": "부산지사장",
+    "url": "https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9D%B4%ED%95%B4%EA%B2%BD/",
+    "tier": "standard",
+    "category": "교육",
+    "chapter": "BNI 파이오니어"
+  },
+  {
+    "name": "고영래",
+    "company": "더케이부산병원",
+    "role": "대표원장",
+    "url": "https://jinjjabg-hub.github.io/bni-giants/%EA%B3%A0%EC%98%81%EB%9E%98/",
+    "tier": "standard",
+    "category": "병원",
+    "chapter": "BNI 자이언츠"
+  },
+  {
+    "name": "배준환",
+    "company": "퍼펙트라인",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/bni-giants/%EB%B0%B0%EC%A4%80%ED%99%98/",
+    "tier": "standard",
+    "category": "시공",
+    "chapter": "BNI 자이언츠"
+  },
+  {
+    "name": "조신아",
+    "company": "아트뱅가드",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/bni-giants/%EC%A1%B0%EC%8B%A0%EC%95%84/",
+    "tier": "standard",
+    "category": "브랜딩",
+    "chapter": "BNI 자이언츠"
+  },
+  {
+    "name": "김태연",
+    "company": "선랑 J.D.C",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EA%B9%80%ED%83%9C%EC%97%B0/",
+    "tier": "standard",
+    "category": "교육",
+    "chapter": "기타"
+  },
+  {
+    "name": "김화",
+    "company": "위한무역 주식회사",
+    "role": "대표",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EA%B9%80%ED%99%94/",
+    "tier": "standard",
+    "category": "뷰티",
+    "chapter": "기타"
+  },
+  {
+    "name": "마미란",
+    "company": "유니시티코리아",
+    "role": "다이아몬드",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EB%A7%88%EB%AF%B8%EB%9E%80/",
+    "tier": "standard",
+    "category": "건강",
+    "chapter": "기타"
+  },
+  {
+    "name": "이주석",
+    "company": "넥스트와이즈코칭",
+    "role": "대표코치",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EC%9D%B4%EC%A3%BC%EC%84%9D/",
+    "tier": "standard",
+    "category": "코칭",
+    "chapter": "기타"
+  },
+  {
+    "name": "임동기",
+    "company": "글라스온 위드렌즈 연제구청점",
+    "role": "원장",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EC%9E%84%EB%8F%99%EA%B8%B0/",
+    "tier": "standard",
+    "category": "안경",
+    "chapter": "기타"
+  },
+  {
+    "name": "김득분",
+    "company": "한화금융서비스",
+    "role": "FP",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EA%B9%80%EB%93%9D%EB%B6%84/",
+    "tier": "standard",
+    "category": "보험",
+    "chapter": "기타"
+  },
+  {
+    "name": "전미진",
+    "company": "라이프가디언 자산리스크센터",
+    "role": "",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EC%A0%84%EB%AF%B8%EC%A7%84/",
+    "tier": "standard",
+    "category": "보험",
+    "chapter": "기타"
   }
 ]

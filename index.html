@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>DiCA Gallery | TM LINK 디지털 명함 레퍼런스</title>
-<meta name="description" content="TM LINK가 제작한 디지털 명함 포트폴리오. 실제 제작 사례를 확인하세요."/>
+<title>비즈홈 갤러리 | TM LINK 디지털 비즈홈 모음</title>
+<meta name="description" content="TM LINK가 제작한 비즈홈(디지털 명함) 갤러리. 실제 제작 사례를 확인하세요."/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --bg: #000000;
-  --card: #141414;
-  --card2: #1c1c1c;
-  --border: #2a2a2a;
-  --gold: #f2ca50;
-  --gold2: #d4af37;
-  --white: #e2e2e2;
-  --muted: #888;
+  --bg: #faf8f3;
+  --card: #ffffff;
+  --card2: #f3efe6;
+  --border: #e6e0d2;
+  --gold: #a87a00;
+  --gold2: #c99a1a;
+  --white: #2a2a2a;
+  --muted: #7a7466;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -34,7 +34,7 @@ body {
 /* HEADER */
 header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(0,0,0,0.9);
+  background: rgba(250,248,243,0.92);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   padding: 0 48px; height: 64px;
@@ -49,8 +49,8 @@ header {
 }
 .back-btn:hover { color: var(--gold); }
 .count-badge {
-  background: rgba(242,202,80,0.1);
-  border: 1px solid rgba(242,202,80,0.3);
+  background: rgba(201,154,26,0.12);
+  border: 1px solid rgba(201,154,26,0.35);
   color: var(--gold); font-size: 12px; font-weight: 600;
   padding: 4px 12px; border-radius: 20px;
 }
@@ -59,7 +59,7 @@ header {
 .gallery-hero {
   padding: 60px 48px 40px;
   text-align: center;
-  background: radial-gradient(ellipse at top, rgba(242,202,80,0.06) 0%, transparent 60%);
+  background: radial-gradient(ellipse at top, rgba(242,200,80,0.28) 0%, transparent 65%);
 }
 .gallery-hero h1 {
   font-family: 'Montserrat', sans-serif;
@@ -80,12 +80,12 @@ header {
 .filter-btn {
   padding: 7px 16px; border-radius: 20px;
   border: 1px solid var(--border);
-  background: transparent; color: var(--muted);
+  background: #fff; color: var(--muted);
   font-size: 12px; font-weight: 600; cursor: pointer;
   transition: all 0.2s; font-family: 'Inter', sans-serif;
 }
 .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
-.filter-btn.active { background: var(--gold); border-color: var(--gold); color: #000; }
+.filter-btn.active { background: var(--gold); border-color: var(--gold); color: #fff; }
 
 /* SEARCH */
 .search-wrap {
@@ -117,6 +117,7 @@ header {
 
 /* CARD */
 .dica-card {
+  box-shadow: 0 2px 8px rgba(60,50,20,0.06);
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -130,7 +131,7 @@ header {
 .dica-card:hover {
   border-color: var(--gold);
   transform: translateY(-8px);
-  box-shadow: 0 20px 48px rgba(242,202,80,0.1);
+  box-shadow: 0 20px 40px rgba(168,122,0,0.15);
 }
 .card-cover {
   height: 44px; width: 44px; position: relative;
@@ -144,7 +145,7 @@ header {
 .card-cover-char {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px; font-weight: 800;
-  opacity: 0.85; line-height: 1;
+  opacity: 0.9; line-height: 1; color: #6b5200;
 }
 .card-top { display: flex; align-items: center; gap: 12px; padding: 16px 44px 0 18px; }
 .card-title-wrap { min-width: 0; flex: 1; }
@@ -153,8 +154,8 @@ header {
   position: absolute; top: 14px; right: 14px;
   font-size: 8px; font-weight: 700; letter-spacing: 0.1em;
   text-transform: uppercase; padding: 2px 8px;
-  border-radius: 20px; border: 1px solid rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.5); white-space: nowrap;
+  border-radius: 20px; border: 1px solid var(--border);
+  color: var(--muted); white-space: nowrap;
 }
 .card-chapter {
   font-size: 10px; font-weight: 600; letter-spacing: 0.04em;
@@ -171,8 +172,8 @@ header {
 }
 .card-category {
   font-size: 10px; padding: 3px 9px;
-  background: rgba(242,202,80,0.08);
-  border: 1px solid rgba(242,202,80,0.2);
+  background: rgba(201,154,26,0.1);
+  border: 1px solid rgba(201,154,26,0.28);
   border-radius: 20px; color: var(--gold);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 55%;
 }
@@ -185,20 +186,20 @@ header {
   border: 1px solid var(--border); background: transparent;
   color: var(--muted); cursor: pointer; transition: all 0.2s;
 }
-.card-share-btn:hover { border-color: #FEE500; color: #FEE500; background: rgba(254,229,0,0.08); }
+.card-share-btn:hover { border-color: #d4b800; color: #8a7600; background: rgba(254,229,0,0.25); }
 .card-share-btn .material-symbols-outlined { font-size: 16px; }
 
 /* GALLERY SHARE BUTTON (header) */
 .gallery-share-btn {
   display: flex; align-items: center; gap: 6px;
   background: transparent;
-  border: 1px solid rgba(242,202,80,0.3);
+  border: 1px solid rgba(201,154,26,0.4);
   color: var(--gold); font-size: 12px; font-weight: 600;
   padding: 6px 14px; border-radius: 20px;
   cursor: pointer; transition: all 0.2s;
   font-family: 'Inter', sans-serif;
 }
-.gallery-share-btn:hover { background: rgba(242,202,80,0.1); border-color: var(--gold); }
+.gallery-share-btn:hover { background: rgba(201,154,26,0.12); border-color: var(--gold); }
 .gallery-share-btn .material-symbols-outlined { font-size: 16px; }
 @media (max-width: 480px) {
   .gallery-share-btn span:not(.material-symbols-outlined) { display: none; }
@@ -211,7 +212,7 @@ header {
   background: #FEE500; color: #191919;
   font-size: 13px; font-weight: 600;
   padding: 12px 24px; border-radius: 30px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   opacity: 0; pointer-events: none;
   transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
   z-index: 100;
@@ -237,18 +238,18 @@ header {
   cursor: default; min-height: 220px;
   transition: border-color 0.2s;
 }
-.add-card:hover { border-color: rgba(242,202,80,0.3); }
-.add-card .material-symbols-outlined { color: var(--border); font-size: 36px; }
-.add-card p { color: var(--border); font-size: 12px; text-align: center; line-height: 1.6; }
+.add-card:hover { border-color: rgba(201,154,26,0.5); }
+.add-card .material-symbols-outlined { color: #cfc8b6; font-size: 36px; }
+.add-card p { color: #b5ad9a; font-size: 12px; text-align: center; line-height: 1.6; }
 
 /* COVER COLORS */
-.cover-0 { background: linear-gradient(135deg, #1a1400, #2a2000); }
-.cover-1 { background: linear-gradient(135deg, #0d1a1a, #1a2a2a); }
-.cover-2 { background: linear-gradient(135deg, #1a0d1a, #2a1a2a); }
-.cover-3 { background: linear-gradient(135deg, #0d1520, #1a2535); }
-.cover-4 { background: linear-gradient(135deg, #1a1020, #2a1830); }
-.cover-5 { background: linear-gradient(135deg, #1a0d0d, #2a1818); }
-.cover-6 { background: linear-gradient(135deg, #0d1a0d, #1a2a1a); }
+.cover-0 { background: linear-gradient(135deg, #fff3cf, #ffe7a0); }
+.cover-1 { background: linear-gradient(135deg, #d8f1ee, #bfe4df); }
+.cover-2 { background: linear-gradient(135deg, #f7ddf1, #eec4e5); }
+.cover-3 { background: linear-gradient(135deg, #dbe8fa, #c3d7f2); }
+.cover-4 { background: linear-gradient(135deg, #e6dcf8, #d3c4f0); }
+.cover-5 { background: linear-gradient(135deg, #fbdcd8, #f4c3bd); }
+.cover-6 { background: linear-gradient(135deg, #dcf2dc, #c2e5c3); }
 
 /* FOOTER */
 footer {
@@ -295,8 +296,8 @@ footer a { color: var(--gold); text-decoration: none; font-size: 12px; }
 
 <!-- HERO -->
 <div class="gallery-hero">
-  <h1>DiCA <span>Gallery</span></h1>
-  <p>TM LINK가 제작한 디지털 명함 실제 사례 모음.<br/>클릭하면 실제 디지털 명함이 열립니다.</p>
+  <h1>비즈홈 <span>갤러리</span></h1>
+  <p>TM LINK가 제작한 비즈홈 실제 사례 모음.<br/>클릭하면 실제 비즈홈이 열립니다.</p>
 </div>
 
 <!-- SEARCH -->
@@ -314,10 +315,11 @@ footer a { color: var(--gold); text-decoration: none; font-size: 12px; }
   <button class="filter-btn" data-filter="tier:basic">베이직</button>
   <button class="filter-btn" data-filter="tier:standard">스탠다드</button>
   <button class="filter-btn" data-filter="tier:premium">프리미엄</button>
-  <span style="width:1px;height:16px;background:#2a2a2a;margin:0 4px;"></span>
+  <span style="width:1px;height:16px;background:#d9d2c0;margin:0 4px;"></span>
   <button class="filter-btn" data-filter="chapter:BNI 파이오니어">파이오니어</button>
   <button class="filter-btn" data-filter="chapter:BNI 자이언츠">자이언츠</button>
-  <span style="width:1px;height:16px;background:#2a2a2a;margin:0 4px;"></span>
+  <button class="filter-btn" data-filter="chapter:general">일반</button>
+  <span style="width:1px;height:16px;background:#d9d2c0;margin:0 4px;"></span>
   <button class="filter-btn" data-filter="category:뷰티">뷰티</button>
   <button class="filter-btn" data-filter="category:미디어">미디어</button>
   <button class="filter-btn" data-filter="category:디자인">디자인</button>
@@ -334,7 +336,7 @@ footer a { color: var(--gold); text-decoration: none; font-size: 12px; }
 <!-- FOOTER -->
 <footer>
   <a class="logo" href="https://jinjjabg-hub.github.io/T.M-LINK/">◆ TM LINK</a>
-  <p>© 2025 TM LINK · 송승훈 대표 · 디지털 명함 전문 제작</p>
+  <p>© 2025 TM LINK · 송승훈 대표 · 비즈홈 · 디지털 명함 전문 제작</p>
   <a href="https://jinjjabg-hub.github.io/T.M-LINK/#pricing">제작 의뢰하기 →</a>
 </footer>
 
@@ -343,25 +345,27 @@ let allCards = [];
 let activeFilter = 'all';
 let searchQuery = '';
 
-// Fisher-Yates 셔플 — 매번 열 때마다 카드 순서를 랜덤으로 섞는다
-function shuffle(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
+// 고정 순서: 파이오니어 비즈홈(1번) → 파이오니어 멤버 → 자이언츠 멤버 → 일반 (그룹 안에서는 cards.json 순서 유지)
+function groupOf(c) {
+  if (c.pinned) return -1;
+  if (c.chapter === 'BNI 파이오니어') return 0;
+  if (c.chapter === 'BNI 자이언츠') return 1;
+  return 2;
+}
+function order(arr) {
+  return arr.map((c, i) => [c, i]).sort((a, b) => groupOf(a[0]) - groupOf(b[0]) || a[1] - b[1]).map(x => x[0]);
 }
 
 // cards.json 로드
 fetch('./cards.json')
   .then(r => r.json())
   .then(data => {
-    allCards = shuffle(data);
+    allCards = order(data);
     render();
   })
   .catch(() => {
     // 로드 실패 시 기본 데이터 사용
-    allCards = shuffle([
+    allCards = order([
       {"name":"송승훈","company":"T.M Link","role":"대표","url":"https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/","tier":"standard","category":"컨설팅","chapter":"BNI 파이오니어"},
       {"name":"김지현","company":"감성온도","role":"대표","url":"https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/","tier":"standard","category":"기타","chapter":"BNI 파이오니어"},
       {"name":"이화춘","company":"뷰티랩","role":"원장","url":"https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9D%B4%ED%99%94%EC%B6%98/","tier":"premium","category":"뷰티","chapter":"BNI 파이오니어"},
@@ -400,7 +404,7 @@ function render() {
 
     const matchFilter = activeFilter === 'all' ||
       (activeFilter.startsWith('tier:') && (card.tier || '').toLowerCase() === activeFilter.split(':')[1]) ||
-      (activeFilter.startsWith('chapter:') && card.chapter === activeFilter.split(':')[1]) ||
+      (activeFilter === 'chapter:general' ? groupOf(card) === 2 : (activeFilter.startsWith('chapter:') && card.chapter === activeFilter.split(':')[1])) ||
       (activeFilter.startsWith('category:') && card.category === activeFilter.split(':')[1]);
 
     return matchSearch && matchFilter;
@@ -416,12 +420,12 @@ function render() {
     return;
   }
 
-  const tierLabel = { basic:'BASIC', standard:'STANDARD', premium:'PREMIUM', free:'FREE PRO', enterprise:'ENTERPRISE' };
+  const tierLabel = { directory:'DIRECTORY', basic:'BASIC', standard:'STANDARD', premium:'PREMIUM', free:'FREE PRO', enterprise:'ENTERPRISE' };
   const colors = ['cover-0','cover-1','cover-2','cover-3','cover-4','cover-5','cover-6'];
 
   grid.innerHTML = filtered.map((card, i) => `
     <a class="dica-card" href="${card.url}" target="_blank">
-      <span class="card-tier-badge">${tierLabel[(card.tier || '').toLowerCase()] || card.tier}</span>
+      ${card.tier === 'directory' ? '' : `<span class="card-tier-badge">${tierLabel[(card.tier || '').toLowerCase()] || card.tier}</span>`}
       <div class="card-top">
         <div class="card-cover ${colors[i % colors.length]}">
           <img class="card-cover-img" data-base="${getPhotoBase(card.url)}" loading="lazy" alt="">
@@ -431,7 +435,7 @@ function render() {
           <div class="card-name-row">
             <span class="card-name">${card.name}</span>
           </div>
-          <div class="card-role">${card.role}${card.chapter ? ` · <span class="card-chapter">${card.chapter}</span>` : ''}</div>
+          <div class="card-role">${[card.role, card.chapter ? `<span class="card-chapter">${card.chapter}</span>` : ''].filter(Boolean).join(' · ')}</div>
         </div>
       </div>
       <div class="card-body">
@@ -485,10 +489,10 @@ document.getElementById('gallery-grid').addEventListener('click', e => {
   const name = btn.dataset.name;
   const company = btn.dataset.company;
   const url = btn.dataset.url;
-  const text = `📇 ${name} | ${company}\n디지털 명함 확인하기 👇`;
+  const text = `📇 ${name} | ${company}\n비즈홈 확인하기 👇`;
 
   if (navigator.share) {
-    navigator.share({ title: `${name} 디지털 명함`, text, url }).catch(() => {});
+    navigator.share({ title: `${name} 비즈홈`, text, url }).catch(() => {});
   } else {
     navigator.clipboard.writeText(`${text}\n${url}`).then(() => {
       showToast('링크 복사 완료! 카톡에 붙여넣기 하세요 💬');
@@ -509,11 +513,11 @@ function showToast(msg) {
 
 // 갤러리 전체 공유하기
 document.getElementById('gallery-share-btn').addEventListener('click', () => {
-  const url = 'https://jinjjabg-hub.github.io/DiCA-gallery/';
-  const text = 'TM LINK가 제작한 디지털 명함(DiCA) 모음 갤러리입니다 👇';
+  const url = 'https://jinjjabg-hub.github.io/BizHome-gallery/';
+  const text = 'TM LINK가 제작한 비즈홈 모음 갤러리입니다 👇';
 
   if (navigator.share) {
-    navigator.share({ title: 'DiCA Gallery | TM LINK', text, url }).catch(() => {});
+    navigator.share({ title: '비즈홈 갤러리 | TM LINK', text, url }).catch(() => {});
   } else {
     navigator.clipboard.writeText(`${text}\n${url}`).then(() => {
       showToast('갤러리 링크 복사 완료! 카톡에 붙여넣기 하세요 💬');
