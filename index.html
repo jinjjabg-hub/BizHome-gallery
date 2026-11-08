@@ -428,7 +428,7 @@ function render() {
       ${card.tier === 'directory' ? '' : `<span class="card-tier-badge">${tierLabel[(card.tier || '').toLowerCase()] || card.tier}</span>`}
       <div class="card-top">
         <div class="card-cover ${colors[i % colors.length]}">
-          <img class="card-cover-img" data-base="${getPhotoBase(card.url)}" alt="">
+          <img class="card-cover-img" data-base="${getPhotoBase(card.url)}" ${card.photo ? `data-photo="${card.photo}"` : ''} alt="">
           <div class="card-cover-char">${card.name.charAt(0)}</div>
         </div>
         <div class="card-title-wrap">
@@ -459,7 +459,14 @@ function render() {
   `;
 
   grid.querySelectorAll('.card-cover-img').forEach(img => {
-    loadCardPhoto(img, img.dataset.base, 0);
+    if (img.dataset.photo) {
+      // cards.json에 photo 주소를 직접 적은 경우: 그 사진을 바로 사용
+      img.onload = () => { img.style.display = 'block'; const ch = img.parentElement.querySelector('.card-cover-char'); if (ch) ch.style.visibility = 'hidden'; };
+      img.onerror = () => loadCardPhoto(img, img.dataset.base, 0);
+      img.src = img.dataset.photo;
+    } else {
+      loadCardPhoto(img, img.dataset.base, 0);
+    }
   });
 }
 
