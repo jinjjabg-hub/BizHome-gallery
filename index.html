@@ -377,7 +377,7 @@ fetch('./cards.json')
   });
 
 // 프로필 사진 로드 — 파일명이 명함마다 달라서 순서대로 시도, 다 실패하면 글자 그대로 유지
-const PHOTO_FILENAMES = ['profil.png', 'profile.png', 'profil.jpg', 'profile.jpg', 'profil.jpeg'];
+const PHOTO_FILENAMES = ['profil.png', 'profile.png', 'profil.jpg', 'profile.jpg', 'profil.jpeg', 'profile.jpeg', 'profile.webp'];
 
 function getPhotoBase(url) {
   let base = url.replace(/index\.html?$/, '');
@@ -388,7 +388,7 @@ function getPhotoBase(url) {
 function loadCardPhoto(img, base, idx) {
   if (idx >= PHOTO_FILENAMES.length) return; // 전부 실패 — 뒤에 있는 글자 아바타가 그대로 보임
   img.onerror = () => loadCardPhoto(img, base, idx + 1);
-  img.onload = () => { img.style.display = 'block'; };
+  img.onload = () => { img.style.display = 'block'; const ch = img.parentElement.querySelector('.card-cover-char'); if (ch) ch.style.visibility = 'hidden'; };
   img.src = base + PHOTO_FILENAMES[idx];
 }
 
@@ -428,7 +428,7 @@ function render() {
       ${card.tier === 'directory' ? '' : `<span class="card-tier-badge">${tierLabel[(card.tier || '').toLowerCase()] || card.tier}</span>`}
       <div class="card-top">
         <div class="card-cover ${colors[i % colors.length]}">
-          <img class="card-cover-img" data-base="${getPhotoBase(card.url)}" loading="lazy" alt="">
+          <img class="card-cover-img" data-base="${getPhotoBase(card.url)}" alt="">
           <div class="card-cover-char">${card.name.charAt(0)}</div>
         </div>
         <div class="card-title-wrap">
