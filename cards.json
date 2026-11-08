@@ -4,8 +4,8 @@
     "company": "BNI 파이오니어 챕터 디렉토리",
     "role": "디렉토리",
     "url": "https://bnich.bizmy.net/pioneer",
-    "tier": "directory",
-    "category": "디렉토리",
+    "tier": "단체비즈홈",
+    "category": "챕터",
     "chapter": "BNI 파이오니어",
     "pinned": true
   },
@@ -13,7 +13,7 @@
     "name": "송승훈",
     "company": "T.M Link",
     "role": "대표",
-    "url": "https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%86%A1%EC%8A%B9%ED%9B%88/",
+    "url": "https://https://bizhome.bizmy.net/songsh/",
     "tier": "premium",
     "category": "앱개발",
     "chapter": "BNI 파이오니어"
@@ -382,7 +382,7 @@
     "name": "김득분",
     "company": "한화금융서비스",
     "role": "FP",
-    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EA%B9%80%EB%93%9D%EB%B6%84/",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/에리카/",
     "tier": "standard",
     "category": "보험",
     "chapter": "기타"
@@ -391,7 +391,7 @@
     "name": "전미진",
     "company": "라이프가디언 자산리스크센터",
     "role": "",
-    "url": "https://jinjjabg-hub.github.io/NAMECARD/%EC%A0%84%EB%AF%B8%EC%A7%84/",
+    "url": "https://jinjjabg-hub.github.io/NAMECARD/보험왕/",
     "tier": "standard",
     "category": "보험",
     "chapter": "기타"
